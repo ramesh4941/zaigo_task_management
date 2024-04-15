@@ -1,66 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Task Management System
+This is a simple task management system built using Laravel. It allows users to create tasks, assign them to specific users, update task statuses, and add comments with the option to upload files.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Requirements
+1. User Management:
+* Basic user authentication and authorization functionality.
+* Only authenticated users can create tasks and add comments.
 
-## About Laravel
+2. Task Management:
+* Database structure to store tasks with fields for title, description, assigned user, and status.
+* CRUD operations for tasks, including file upload option in task creation.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+3. Comments:
+* Relationship between tasks and comments. Each task can have multiple comments.
+* Database structure to store comments with fields for comment content and the user who posted it.
+* CRUD operations for comments, including file upload option.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+4. User Interface:
+* Simple and intuitive interface for managing tasks and comments.
+* HTML, CSS, and Bootstrap for a responsive and visually appealing interface.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Setup Instructions
+1. Clone the repository:
+`git clone https://github.com/your-username/task-management-system.git`
 
-## Learning Laravel
+2. Navigate into the project directory
+`cd task-management-system`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. Install dependencies
+`composer update` and `npm install`
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+4. Create a copy of the 
+`.env.example` file and rename it to `.env.` Update the database configuration with your credentials:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. Run database migrations
+`php artisan migrate`
 
-## Laravel Sponsors
+6. Serve the application
+`php artisan serve`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+7. Start development server
+`npm run dev`
 
-### Premium Partners
+8. Access the application in your web browser at
+`http://localhost:8000`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Additional Notes
+* Ensure that your server meets the Laravel requirements.
+    1. NGINX / Server / Localserver
+    2. PHP 8.2
+    3. MySQL
+    4. PHPMyAdmin
 
-## Contributing
+* For any issues or questions, please refer to the Laravel documentation or open an issue in the GitHub repository.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Features
+1. Any user can create task.
+2. Assign to specific user.
+3. Only task owner can edit or delete task.
+4. Only task owner can assign task to specific user.
+5. Both task creator and assigned user can change status.
+6. User can add an attachment in the task.
+7. Both task creator and assigned user can comment on task.
+8. Comment can be only delete or update by user who comment.
+9. Attachment can be upload in the comment section
