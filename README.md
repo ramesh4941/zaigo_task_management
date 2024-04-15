@@ -27,7 +27,7 @@ This is a simple task management system built using Laravel. It allows users to 
 `cd task-management-system`
 
 3. Install dependencies
-`composer install` and `npm install`
+`composer update` and `npm install`
 
 4. Create a copy of the 
 `.env.example` file and rename it to `.env.` Update the database configuration with your credentials:
